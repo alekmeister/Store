@@ -1,0 +1,25 @@
+@use 'src/app/styles/variables/mixins';
+
+.footer {
+ font-size: var(--font-size-s);
+  line-height: 2rem;
+  border-top: 1px solid var(--primary-10);
+}
+
+.title {
+  color: var(--primary-30);
+}
+
+.footer_body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px;
+}
+
+
+
+.footer_list {
+  display: flex;
+  flex-direction: column;
+}

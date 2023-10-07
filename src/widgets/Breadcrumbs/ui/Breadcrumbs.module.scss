@@ -1,0 +1,12 @@
+.breadcrumbs_wrapper {
+  display: flex;
+  font-size: var(--font-size-s);
+}
+
+.breadcrumbs_wrapper > * {
+  margin: 0 5px;
+  color: var(--primary-30);
+  &:last-child {
+    color: var(--primary);
+  }
+}

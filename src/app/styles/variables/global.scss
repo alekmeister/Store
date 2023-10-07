@@ -1,0 +1,29 @@
+:root {
+  --font-family-primary: "Manrope", "sans-serif";
+  --font-family-secondary: "Inter", "sans-serif";
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
+
+
+  // Color
+  --primary: #000;
+  --primary-80: rgba(0,0,0,.8);
+  --primary-70: rgba(0,0,0,.7);
+  --primary-60: rgba(0,0,0,.6);
+  --primary-50: rgba(0,0,0,.5);
+  --primary-40: rgba(0,0,0,.4);
+  --primary-30: rgba(0,0,0,.3);
+  --primary-20: rgba(0,0,0,.2);
+  --primary-10: rgba(0,0,0,.1);
+  --primary-5: rgba(0,0,0,.05);
+
+  --white: #fff;
+
+  // Sizes
+  --header-height: 100px;
+  --footer-height: 200px;
+  --global-padding-left-rigth: 40px;
+  --global-padding-top-bottom: 30px;
+}

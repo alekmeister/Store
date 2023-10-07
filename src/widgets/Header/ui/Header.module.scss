@@ -1,0 +1,40 @@
+@use 'src/app/styles/variables/mixins';
+
+.header_body {
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  margin: 0 auto;
+}
+.actions {
+  display: flex;
+  position: absolute;
+  right: var(--global-padding-left-rigth);
+}
+.action_container {
+  @include mixins.flex-center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  &:hover {
+    background-color: var(--primary-5);
+  }
+}
+
+.action {
+  width: 2rem;
+  height: 2rem;
+}
+
+.top_links {
+  @include mixins.flex-center;
+  & > * {
+    margin-right: 1rem;
+  }
+}
