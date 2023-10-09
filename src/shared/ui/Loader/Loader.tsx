@@ -1,10 +1,10 @@
 import React, { type FC } from 'react';
 
-import Lottie from 'lottie-react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 
 import styles from './Loader.module.scss';
 
-import loader from 'shared/assets/animations/loader.json';
+import loader from 'shared/assets/animations/loader.lottie';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 export enum LoaderSizes {
@@ -30,7 +30,7 @@ export const Loader: FC<LoaderProps> = (props) => {
       className={classNames(styles.loader_container, mods, [className ?? ''])}
       {...otherProps}
     >
-      <Lottie animationData={loader} loop />
+      <DotLottiePlayer src={loader} autoplay loop />
     </div>
   );
 };

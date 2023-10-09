@@ -1,10 +1,11 @@
 import { FC, ReactElement } from 'react';
 
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import styles from './Breadcrumbs.module.scss';
 
 import { TRANSLATED_PAGE_NAME } from 'shared/config/routeConfig/routeConfig';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Container } from 'shared/ui/Container/Container';
 
 export const Breadcrumbs: FC = () => {
@@ -20,21 +21,19 @@ export const Breadcrumbs: FC = () => {
       currentLink += `/${crumb}`;
 
       return (
-        <Link key={crumb} to={currentLink}>
+        <AppLink key={crumb} to={currentLink}>
           {TRANSLATED_PAGE_NAME[crumb] || crumb}
-        </Link>
+        </AppLink>
       );
     });
 
   return (
-    <Container>
-      <div className={styles.breadcrumbs_wrapper}>
-        {crumbs.map((el, index) => (
-          <>
-            {el} {displaySlash(crumbs, index)}
-          </>
-        ))}
-      </div>
+    <Container className={styles.breadcrumbs_wrapper}>
+      {crumbs.map((el, index) => (
+        <>
+          {el} {displaySlash(crumbs, index)}
+        </>
+      ))}
     </Container>
   );
 };

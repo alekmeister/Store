@@ -8,13 +8,22 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 interface AppLinkProps extends LinkProps {
   className?: string;
+  underlined?: boolean;
 }
 
-export const AppLink: FC<AppLinkProps> = ({ to, className, children, ...otherProps }) => {
+export const AppLink: FC<AppLinkProps> = ({
+  to,
+  className,
+  children,
+  underlined,
+  ...otherProps
+}) => {
+  const underlinedClassName = underlined ? styles.app_link_underlined : styles.app_link;
+
   return (
     <Link
       to={to}
-      className={classNames(styles.app_link, {}, [className ?? ''])}
+      className={classNames(underlinedClassName, {}, [className ?? ''])}
       {...otherProps}
     >
       {children}

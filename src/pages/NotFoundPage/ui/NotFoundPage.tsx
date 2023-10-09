@@ -1,10 +1,10 @@
-import React, { type FC, useRef } from 'react';
+import React, { type FC } from 'react';
 
-import Lottie from 'lottie-react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 
-import cls from './NotFoundPage.module.scss';
+import styles from './NotFoundPage.module.scss';
 
-import notFoundAnimation from 'shared/assets/animations/cat_with_tv.json';
+import notFoundAnimation from 'shared/assets/animations/cat_with_tv.lottie';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 interface NotFoundPageProps {
@@ -12,16 +12,11 @@ interface NotFoundPageProps {
 }
 
 const NotFoundPage: FC<NotFoundPageProps> = () => {
-  const lottieRef = useRef(null);
-
-  // @ts-ignore
-  lottieRef.current?.setSpeed(0.4);
-
   return (
-    <div className={classNames(cls.NotFoundPage)}>
+    <div className={classNames(styles.NotFoundPage)}>
       Этой страницы не существует...
       <br />А пока можете посмотреть телевизор!
-      <Lottie animationData={notFoundAnimation} loop lottieRef={lottieRef} />
+      <DotLottiePlayer src={notFoundAnimation} loop autoplay speed={0.5} />
     </div>
   );
 };

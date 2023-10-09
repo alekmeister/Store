@@ -1,40 +1,61 @@
 @use 'src/app/styles/variables/mixins';
 
-.header_body {
+
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+}
+
+.header_container {
   height: var(--header-height);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   position: relative;
+  padding: 0 var(--global-padding-left-rigth);
 }
 
 .logo {
-  margin: 0 auto;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
 }
+
+.navigations > * {
+  margin-right: 3rem;
+}
+
 .actions {
   display: flex;
-  position: absolute;
-  right: var(--global-padding-left-rigth);
 }
+
+
 .action_container {
   @include mixins.flex-center;
   width: 50px;
   height: 50px;
   text-align: center;
   border-radius: 5px;
+  transition: var(--transition-standart);
   &:hover {
     background-color: var(--primary-5);
+    cursor: pointer;
   }
 }
 
-.action {
+
+.action_icon {
   width: 2rem;
   height: 2rem;
 }
 
-.top_links {
-  @include mixins.flex-center;
-  & > * {
-    margin-right: 1rem;
-  }
-}
+
+
+//.top_links {
+//  @include mixins.flex-center;
+//  & > * {
+//    margin-right: 1rem;
+//  }
+//}

@@ -1,6 +1,8 @@
 .breadcrumbs_wrapper {
   display: flex;
   font-size: var(--font-size-s);
+  margin-top: var(--header-height);
+  background-color:var(--primary-5) ;
 }
 
 .breadcrumbs_wrapper > * {

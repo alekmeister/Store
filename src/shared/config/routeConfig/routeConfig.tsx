@@ -12,7 +12,7 @@ export enum AppRoutes {
   WOMEN = 'women',
 }
 
-export const RoutePath: Record<AppRoutes, string> = {
+export const ROUTE_PATHS: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.NOT_FOUND]: '*',
   [AppRoutes.MEN]: '/men',
@@ -27,19 +27,19 @@ export const TRANSLATED_PAGE_NAME: Record<AppRoutes | string, string> = {
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {
-    path: RoutePath.main,
+    path: ROUTE_PATHS.main,
     element: <MainPage />,
   },
   [AppRoutes.NOT_FOUND]: {
-    path: RoutePath.not_found,
+    path: ROUTE_PATHS.not_found,
     element: <NotFoundPage />,
   },
   [AppRoutes.MEN]: {
-    path: RoutePath.men,
+    path: ROUTE_PATHS.men,
     element: <span>men</span>,
   },
   [AppRoutes.WOMEN]: {
-    path: RoutePath.women,
+    path: ROUTE_PATHS.women,
     element: <span>women</span>,
   },
 };

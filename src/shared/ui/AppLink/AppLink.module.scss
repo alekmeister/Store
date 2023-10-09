@@ -1,4 +1,9 @@
 .app_link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.app_link_underlined {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -11,7 +16,7 @@
     width: 0;
     height: 1.5px;
     background-color: var(--primary);
-    transition: width 0.3s ease;
+    transition: var(--transition-standart);
   }
   &:hover::after {
     width: 100%;
