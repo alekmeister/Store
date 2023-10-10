@@ -5,6 +5,7 @@ header {
   position: fixed;
   width: 100%;
   background: var(--white);
+  z-index: 100;
 }
 
 .header_container {
