@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import BasketLogo from 'shared/assets/icons/bag.svg?react';
 import Logo from 'shared/assets/icons/logo.svg?react';
