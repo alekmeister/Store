@@ -10,10 +10,10 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 export const Header: FC = () => {
-  const [isOpenBasket, setOpenBasket] = useState(false);
-  const closeBasket = (): void => {
-    setOpenBasket((prev) => !prev);
-  };
+  // const [isOpenBasket, setOpenBasket] = useState(false);
+  // const closeBasket = (): void => {
+  //   setOpenBasket((prev) => !prev);
+  // };
 
   return (
     <header>
