@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import BasketLogo from 'shared/assets/icons/bag.svg?react';
 import Logo from 'shared/assets/icons/logo.svg?react';
@@ -10,6 +10,11 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 export const Header: FC = () => {
+  const [isOpenBasket, setOpenBasket] = useState(false);
+  const closeBasket = (): void => {
+    setOpenBasket((prev) => !prev);
+  };
+
   return (
     <header>
       <div className={styles.header_container}>
